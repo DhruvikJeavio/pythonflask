@@ -10,7 +10,7 @@ env*
 dist/
 build/
 *.egg
-*.egg-info/
+*.egg-info/git 
 _mailinglist
 .tox/
 .cache/

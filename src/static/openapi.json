@@ -1,0 +1,201 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "0.6.9",
+    "title": "FLASK APIs",
+    "description": "APIs written in Flask and documented in Swagger"
+  },
+  "tags": [{
+    "name": "customer",
+    "description": "customer CRUD apis"
+  }],
+  "paths": {
+    "/api/customers": {
+      "get": {
+        "tags": ["customer"],
+        "summary": "Get all customers .",
+
+        "description": "Returns customers",
+        "responses": {
+          "200": {
+            "description": "returns customer profiles",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Customers": {
+                    "value": "{\"company\":\"Jeavio\",\"profile\":\"Project intern\",\"username\":\"Dhruvik Donga\"}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/customer/{user_id}": {
+      "get": {
+        "summary": "Get a customer by id.",
+        "tags": ["customer"],
+
+        "description": "Returns customer by id",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "user_id",
+            "required": true,
+            "schema":{
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "returns customer profile of a id",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Customers": {
+                    "value": "{\"company\":\"Jeavio\",\"profile\":\"Project intern\",\"username\":\"Dhruvik Donga\"}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Edit a customer by id.",
+        "tags": ["customer"],
+
+        "description": "Edit customer by id",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "user_id",
+            "required": true,
+            "schema":{
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody":{
+          "description": "Enter json customer input",
+          "required": true,
+          "content": {
+            "application/json":{
+              "schema":{
+                "type": "object",
+                "properties": {
+                  "name":{
+                    "type": "string"
+                  },
+                  "company":{
+                    "type": "string"
+                  },
+                  "profile":{
+                    "type": "string"
+                  },
+                  "team":{
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "returns customer profile of a id",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Customers": {
+                    "value": "{\"company\":\"Jeavio\",\"profile\":\"Project intern\",\"username\":\"Dhruvik Donga\"}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a customer by id.",
+        "tags": ["customer"],
+
+        "description": "Delete customer by id",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "user_id",
+            "required": true,
+            "schema":{
+              "type": "integer"
+            }
+          }
+        ],
+       
+        "responses": {
+          "200": {
+            "description": "Delete customer profile of a id",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Customers": {
+                    "value": "{\"company\":\"Jeavio\",\"profile\":\"Project intern\",\"username\":\"Dhruvik Donga\"}"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/customer": {
+      "post": {
+        "summary": "Creates a new customer.",
+        "tags": ["customer"],
+
+        "requestBody":{
+          "description": "Enter json customer input",
+          "required": true,
+          "content": {
+            "application/json":{
+              "schema":{
+                "type": "object",
+                "properties": {
+                  "name":{
+                    "type": "string"
+                  },
+                  "company":{
+                    "type": "string"
+                  },
+                  "profile":{
+                    "type": "string"
+                  },
+                  "team":{
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200":{
+            "description": "returns response success or failure",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Customers": {
+                    "value": "object created successfully"
+                  }
+                }
+              }
+            }
+          }
+        }
+        
+      }
+    }
+  }
+}
