@@ -10,8 +10,8 @@ Swagger docs for the APIs and MVC pattern for API development
     source venv/bin/activate
     pip install -r requirements.txt
     
-Create your database in PostgreSQL and update the config file for it. Run the migrations:-  
-    cd src
+### Create your database in PostgreSQL and update the config file for it. Run the migrations:-  
+    cd src  
     export FLASK_APP=server
     flask run
     flask db init
