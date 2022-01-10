@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "0.6.9",
+    "version": "0.6.0",
     "title": "FLASK APIs",
     "description": "APIs written in Flask and documented in Swagger"
   },

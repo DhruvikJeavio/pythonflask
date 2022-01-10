@@ -1,6 +1,6 @@
 ### Flask webapp for training purpose  
 Swagger docs for the APIs and MVC pattern for API development
-![Screenshot from 2022-01-07 18-29-43](https://user-images.githubusercontent.com/96610585/148547614-f6793bc7-33b0-41e1-9f1b-9617f55dd66b.png)  
+![Screenshot from 2022-01-10 10-23](https://user-images.githubusercontent.com/96610585/148719984-cbc18c13-3de3-4966-9310-981c8472d214.png)
 
 ### Steps to setup project
     git clone <https://github.com/DhruvikJeavio/pythonflask.git>
